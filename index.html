@@ -9,8 +9,9 @@
     <script>
         $(document).ready(function() {
             $("#btn-summary").on("click", function() {
-                var ps = new ProcessSentence($("#origin").val());
-                console.log(ps.getSentenceMetrics());
+                var tr = new TextRank($("#origin").val());
+                console.log(tr.getSummarizedOneText());
+                $("#summrized").text(tr.getSummarizedThreeText());
             });
         });
     </script>
